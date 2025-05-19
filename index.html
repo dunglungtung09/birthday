@@ -287,4 +287,16 @@
 <script src="demoAudioDetectionListeners.js"></script>
 <script src="demo.js"></script>
 </body>
+	<script>
+document.getElementById("start").addEventListener("click", function() {
+    const music = document.getElementById("birthday-music");
+    music.play().catch(error => {
+        console.log("Autoplay prevented:", error);
+    });
+
+    document.getElementById("cake-holder").style.opacity = 1;
+    document.getElementById("cake-holder").classList.add("done");
+});
+</script>
+
 </html>
